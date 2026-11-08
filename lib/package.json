@@ -1,0 +1,12 @@
+{
+  "name": "@leadadapter/client",
+  "version": "0.1.0",
+  "description": "Workspace-scoped LeadAdapter REST client generated from the published OpenAPI contract",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {".": {"types": "./index.d.ts", "import": "./index.js"}},
+  "files": ["index.js", "index.d.ts", "requests.d.ts", "operations.js", "README.md"],
+  "engines": {"node": ">=22"},
+  "scripts": {"generate": "python3 generate.py"}
+}
