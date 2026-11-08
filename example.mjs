@@ -10,6 +10,7 @@ else {
  if (operation.scope!=='api:read') throw new Error('This starter only executes api:read operations');
  if (operation.idempotencyRequired && !params.idempotencyKey) throw new Error('Supply idempotencyKey in LEADADAPTER_PARAMS; preserve it when retrying');
  for(const name of operation.requestSchema?.required||[]) if(params.body?.[name]===undefined) throw new Error('Supply body.'+name+' in LEADADAPTER_PARAMS');
+ if(id==='enrich_post' && !['public_id','linkedin_urn','lead_id'].some(name=>params.body?.[name])) throw new Error('Supply an authorized public_id, linkedin_urn or lead_id in LEADADAPTER_PARAMS.body');
  const client=new LeadAdapterClient({apiKey:process.env.LEADADAPTER_API_KEY});
  console.log(JSON.stringify(await client.request(id,params),null,2));
 }
