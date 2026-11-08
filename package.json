@@ -1,6 +1,6 @@
 {
   "name": "linkedin-typescript-sdk",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "JavaScript runtime and generated TypeScript request types for the LeadAdapter REST API.",
   "type": "module",
   "private": false,
@@ -12,6 +12,26 @@
     "test": "node --test",
     "start": "node example.mjs"
   },
-  "exports": "./lib/index.js",
-  "types": "./lib/index.d.ts"
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    },
+    "./workflows": {
+      "types": "./lib/workflows.d.ts",
+      "import": "./lib/workflows.mjs"
+    }
+  },
+  "types": "./lib/index.d.ts",
+  "bin": {
+    "leadadapter": "./lib/cli.mjs"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE",
+    "capabilities.json",
+    "docs",
+    "examples"
+  ]
 }

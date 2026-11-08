@@ -6,6 +6,29 @@ A public JavaScript client with TypeScript declarations and operation-specific r
 
 [Create your LeadAdapter account](https://leadadapter.com/github/start?integration=linkedin-typescript-sdk&utm_source=github&utm_campaign=github-linkedin-typescript-sdk&utm_content=readme) · [See plans and pricing](https://leadadapter.com/pricing) · [API documentation](https://leadadapter.com/docs/api?lang=en) · [Full API reference](https://leadadapter.com/docs/api-reference?lang=en)
 
+## Built for coding agents
+
+[Download SDKs and the agent kit from GitHub Releases](https://github.com/jannikco/linkedin-api/releases/latest).
+
+Use this API from **Claude Code, Codex or Grok Build** in your current coding session. Install the skills into the project where you are building:
+
+```sh
+node lib/cli.mjs agents install --client codex --scope project --project /path/to/your/project
+# Replace codex with claude or grok for that client.
+```
+
+No additional AI model key is needed. Live LinkedIn operations use your **LeadAdapter API key** and connected account permissions. Installation never writes credentials or overwrites conflicting files.
+
+Ask your agent: “Research B2B software founders, produce a shortlist with evidence, and wait for my review before adding anyone to CRM.”
+
+### Run a complete workflow now
+
+```sh
+node lib/cli.mjs workflows research-to-crm --fixture
+```
+
+Then follow the [research → review → CRM cookbook](docs/research-to-crm.md) for authorized live reads and reviewed CRM handoff. [capabilities.json](capabilities.json) and [llms.txt](llms.txt) provide concise machine-readable discovery. The SDK keeps its raw request API alongside task-level resources. Five runnable task recipes are included in examples/: people research, post engagers, profile enrichment, reviewed CRM handoff and existing CRM sync. Run each without flags for a plan; --fixture uses synthetic receipts. Live mutation recipes require explicit approvals and caller-supplied stable idempotency keys.
+
 ## What you can build
 
 - Add typed LinkedIn research calls to an existing application.
