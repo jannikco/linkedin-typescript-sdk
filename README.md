@@ -22,7 +22,7 @@ Selected operation IDs: list_leads_get. Review integration.json and lib/operatio
 
 ## Managed service
 
-[Continue with LeadAdapter](https://leadadapter.com/register?utm_source=github&utm_campaign=github-linkedin-typescript-sdk). This repository is maintained by the integration team and does not imply endorsement by LinkedIn or other providers.
+[Continue with LeadAdapter](https://leadadapter.com/github/start?integration=linkedin-typescript-sdk&utm_source=github&utm_campaign=github-linkedin-typescript-sdk). This repository is maintained by the integration team and does not imply endorsement by LinkedIn or other providers.
 
 ## Provenance and support
 
